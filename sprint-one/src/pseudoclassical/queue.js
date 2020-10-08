@@ -13,7 +13,7 @@ Queue.prototype.enqueue = function(value) {
 };
 
 Queue.prototype.dequeue = function() {
-  if (this.head <= this.tail) {
+  if (this.head < this.tail) {
     var data = this.storage[this.head];
     delete this.storage[this.head];
     this.head++;

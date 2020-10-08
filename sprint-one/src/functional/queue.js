@@ -11,7 +11,7 @@ var Queue = function() {
   };
 
   someInstance.dequeue = function() {
-    if (head <= tail) {
+    if (head < tail) {
       var data = storage[head];
       delete storage[head];
       head++;
