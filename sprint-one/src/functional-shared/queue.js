@@ -10,6 +10,7 @@ var Queue = function() {
   return someInstance;
 };
 
+// storage of queue methods
 var queueMethods = {
   enqueue: function(value) {
     this.storage[this.tail] = value;
