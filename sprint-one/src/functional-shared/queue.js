@@ -20,7 +20,7 @@ var queueMethods = {
     if (this.head < this.tail) {
       var data = this.storage[this.head];
       delete this.storage[this.head];
-      this.head++;
+      this.head += 1;
       return data;
     }
   },
