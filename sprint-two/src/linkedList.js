@@ -50,5 +50,6 @@ var Node = function(value) {
  * Complexity: What is the time complexity of the above functions?
  * addToTail - O(1) - adding to tail position
  * removeHead - O(1) - removing from head position
- * contains - O(n) - searching one after the other for node - n depends on number of nodes.
+ * contains - O(n) - recursive, searching one after the other for node - n depends on number of nodes.
  */
+
