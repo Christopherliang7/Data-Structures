@@ -3,8 +3,11 @@ var LinkedList = function() {
   list.head = null;
   list.tail = null;
 
-  // takes a value and adds it to the end of the list
+  // Node contains a value and a next property - this is the link
   list.addToTail = function(value) {
+    // create data variable with Node and value of value.
+    // if there is no head value, insert data to head
+    // else, add to tail
     var data = Node(value);
     if (list.head === null) {
       list.head = data;
@@ -16,6 +19,9 @@ var LinkedList = function() {
 
   // removes the first node from the list and returns it's value
   list.removeHead = function() {
+    // create data variable for list head
+    // set list head to next value
+    // return data variable
     var data = list.head.value;
     list.head = list.head.next;
     return data;
@@ -50,6 +56,6 @@ var Node = function(value) {
  * Complexity: What is the time complexity of the above functions?
  * addToTail - O(1) - adding to tail position
  * removeHead - O(1) - removing from head position
- * contains - O(n) - recursive, searching one after the other for node - n depends on number of nodes.
+ * contains - O(n) - recursive though is only searching one after the other for node - n depends on number of nodes.
  */
 
