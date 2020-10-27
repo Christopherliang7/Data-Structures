@@ -13,6 +13,10 @@ var BinarySearchTree = function(value) {
 
 // accepts a value and places it in tree at correct position
 BinarySearchTree.prototype.insert = function(value) {
+  // if value is less than current, move to left
+  // if there is no left value, this is that value
+  // repeat with right side if value is greater than current value
+  // if there are values there, recurse through insert again until there is no value
   if (value < this.value) {
     if (this.left === undefined) {
       return this.left = new BinarySearchTree(value);
@@ -60,7 +64,7 @@ BinarySearchTree.prototype.depthFirstLog = function(cb) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
- * insert - O(1) - recursive, constant - checking if value is present
+ * insert - O(log n) - recursive - checking if value is present, splits directions
  * contains - Logarithmic O(log n) - due to binary search, being able to deduce the specific direction to head towards rather than searching everything
  * depthFirstLog - O(1) - applying callback onto value, recursive
  */
