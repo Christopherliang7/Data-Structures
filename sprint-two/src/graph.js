@@ -11,7 +11,7 @@ Graph.prototype.addNode = function(node) {
   this.nodes.push(newNode);
 };
 
-// Return a boolean value indicating if the node passed to contains is represented in the graph.
+// Return a boolean value indicating if the node passed to contains is represented in the graph. - 0(1)
 Graph.prototype.contains = function(node) {
   for (var i = 0; i < this.nodes.length; i++) {
     if (this.nodes[i].value === node) {
@@ -93,10 +93,10 @@ Graph.prototype.forEachNode = function(cb) {
 /*
  * Complexity: What is the time complexity of the above functions?
  * addNode - O(1) - adding a node into array
- * removeNode - O(n^2) - iterating array to find node, iterating once more to find edges
- * contains - O(n) - iterating array to find node
- * addEdge - O(n) - iterating an array two separate times
- * removeEdge - O(n) - iterating an array two separate times
- * hasEdge - O(n) - iterating into an array once and checking value
- * forEachNode - O(n) - iterating into array and applying callback
+ * removeNode - O(n) - has to remove n edges first
+ * contains - O(1) -
+ * addEdge - O(1) -
+ * removeEdge - O(1) -
+ * hasEdge - O(1) -
+ * forEachNode - O(n) - iterating into array
  */

@@ -47,6 +47,9 @@ HashTable.prototype.remove = function(k) {
 
 /*
  * Complexity: What is the time complexity of the above functions?
+ * insert: O(1) - amortized constant (resize could result in linear time, but happens rarely)
+ * retrieve: O(1) - amortized constant, for collisions
+ * remove: O(1) - amortized constant
  */
 
 
